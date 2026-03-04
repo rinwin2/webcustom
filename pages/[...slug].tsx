@@ -1,5 +1,5 @@
 import React from 'react';
-import payload from 'payload';
+import { getPayloadClient } from '../getPayload';
 import { GetServerSideProps } from 'next';
 import getConfig from 'next/config';
 import { Type as PageType } from '../collections/Page';
@@ -57,6 +57,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const slug = ctx.params?.slug ? (ctx.params.slug as string[]).join('/') : 'home';
   console.log(`Requested slug: ${slug}`);
 
+  const payload = await getPayloadClient();
   const pageQuery = await payload.find({
     collection: 'pages',
     where: {
