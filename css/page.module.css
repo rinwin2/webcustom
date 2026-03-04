@@ -1,0 +1,93 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+
+.page>* {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+  /* Giảm padding bên ngoài để khối đen cân đối hơn */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.content {
+  width: 95%;
+  max-width: var(--max-width-s);
+  margin: 120px auto 120px;
+  /* Tăng margin bottom để cân đối với bên trên */
+  padding: 60px 40px;
+  background: rgba(65, 64, 64, 0.85);
+  /* Khối màu đen bọc nội dung */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 32px;
+  border: 1px solid rgba(94, 92, 92, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.footer {
+  width: 100%;
+  background: var(--color-bg);
+  /* Đồng nhất màu xanh dương với Header */
+  padding: 30px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+}
+
+.footer a:hover {
+  border-bottom-color: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .page>* {
+    padding: 40px 20px;
+  }
+}
