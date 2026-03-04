@@ -26,13 +26,6 @@ const Page: React.FC<Props> = (props) => {
     <main className={classes.page}>
       <header>
         <h1>{page.title}</h1>
-        <nav className="nav">
-          <a href="#" className="navItem">HTML</a>
-          <a href="#" className="navItem">CSS</a>
-          <a href="#" className="navItem">JavaScript</a>
-          <a href="#" className="navItem">Bootstrap</a>
-          <a href="#" className="navItem">Tailwind CSS</a>
-        </nav>
       </header>
       <div className={classes.content}>
         <Head

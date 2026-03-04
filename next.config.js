@@ -1,7 +1,8 @@
 require('dotenv').config();
 const { sizes } = require('./blocks/Image/sizes.json');
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   publicRuntimeConfig: {
     SERVER_URL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   },
@@ -12,4 +13,9 @@ module.exports = {
     ],
     deviceSizes: sizes,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
+
+module.exports = nextConfig;

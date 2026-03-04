@@ -51,53 +51,23 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #0a0a0a;
-  /* Màu đen tuyền sang trọng như mẫu */
-  padding: 12px 40px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-bg);
+  /* Sử dụng chính cái ô màu xanh dương này */
+  padding: 16px 40px;
+  /* Thêm padding để không bị sát mép */
+  text-align: left;
+  /* Chỉnh tiêu đề sang bên trái */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-}
-
-header h1::after {
-  content: '.';
-  color: #ffffff;
-}
-
-/* Định dạng các nút Menu như mẫu */
-.nav {
-  display: flex;
-  gap: 12px;
-}
-
-.navItem {
-  padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  color: #e0e0e0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.navItem:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  transform: translateY(-1px);
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 img {
